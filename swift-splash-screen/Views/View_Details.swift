@@ -8,35 +8,64 @@
 import SwiftUI
 
 struct View_Details: View {
-    var id: Int
+    var item: MediaItem
         
     var body: some View {
         ZStack {
-            Image(movies[id].poster)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .opacity(0.2)
-                .offset(x:0, y:130)
+            ItemBackgroundImg(imgUrl: item.posterPath)
             ScrollView {
-                Image(movies[id].imgSrc)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                Text(movies[id].title)
+                ItemImage(imgUrl: item.backdropPath)
+                Text((item.name ?? item.title) ?? "Title")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 30))
                     .bold()
                     .padding(3)
-                Text(movies[id].year).font(.system(size: 20))
+                Text((item.firstAirDate ?? item.releaseDate)?.prefix(4) ?? "Year")
+                    .font(.system(size: 20))
                 NavigationLink(destination: View_Player()) {
-                    Button_Play()
+                    ButtonPlay()
                 }
-                Text(movies[id].description).italic().padding().font(.system(size: 20))
+                Text(item.overview).italic().padding().font(.system(size: 20))
             }
         }
     }
 }
 
-struct Button_Play: View {
+struct ItemBackgroundImg: View {
+    var imgUrl: String
+    
+    private let baseUrl = "https://image.tmdb.org/t/p/w500/"
+    
+    var body: some View {
+        AsyncImage(url: URL(string: baseUrl + imgUrl), content: { resImg in
+            resImg
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .opacity(0.2)
+                .offset(x:0, y:130)
+        }, placeholder: {})
+    }
+}
+
+struct ItemImage: View {
+    var imgUrl: String
+    
+    private let baseUrl = "https://image.tmdb.org/t/p/w500/"
+    
+    var body: some View {
+        AsyncImage(url: URL(string: baseUrl + imgUrl), content: { resImg in
+            resImg
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        }, placeholder: {
+            Image(systemName: "film")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        })
+    }
+}
+
+struct ButtonPlay: View {
     var body: some View {
         Image(systemName: "play.fill")
             .frame(width: 365, height: 65)
@@ -48,6 +77,6 @@ struct Button_Play: View {
     }
 }
 
-#Preview {
-    View_Details(id: 2)
-}
+//#Preview {
+//    View_Details(id: 2)
+//}

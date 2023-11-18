@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32043B9E2B07C7F80037BE99 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32043B9D2B07C7F80037BE99 /* MediaViewModel.swift */; };
+		32043BA42B07ED620037BE99 /* MediaItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32043BA32B07ED620037BE99 /* MediaItemModel.swift */; };
 		32831DE52B020FA700A18194 /* swift_splash_screenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32831DE42B020FA700A18194 /* swift_splash_screenApp.swift */; };
 		32831DE72B020FA700A18194 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32831DE62B020FA700A18194 /* ContentView.swift */; };
 		32831DE92B020FAA00A18194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32831DE82B020FAA00A18194 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32043B9D2B07C7F80037BE99 /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
+		32043BA32B07ED620037BE99 /* MediaItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemModel.swift; sourceTree = "<group>"; };
 		32831DE12B020FA700A18194 /* swift-splash-screen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-splash-screen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32831DE42B020FA700A18194 /* swift_splash_screenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_splash_screenApp.swift; sourceTree = "<group>"; };
 		32831DE62B020FA700A18194 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,12 +69,14 @@
 		32831DE32B020FA700A18194 /* swift-splash-screen */ = {
 			isa = PBXGroup;
 			children = (
-				32831DF42B027A3100A18194 /* Views */,
 				32831DE42B020FA700A18194 /* swift_splash_screenApp.swift */,
-				32831DE62B020FA700A18194 /* ContentView.swift */,
 				32831DF22B02113100A18194 /* SplashScreenView.swift */,
-				32831DE82B020FAA00A18194 /* Assets.xcassets */,
+				32831DE62B020FA700A18194 /* ContentView.swift */,
+				32831DF42B027A3100A18194 /* Views */,
 				32831DEA2B020FAA00A18194 /* Preview Content */,
+				32831DE82B020FAA00A18194 /* Assets.xcassets */,
+				32043B9D2B07C7F80037BE99 /* MediaViewModel.swift */,
+				32043BA32B07ED620037BE99 /* MediaItemModel.swift */,
 				32831E042B02E5AA00A18194 /* data.swift */,
 			);
 			path = "swift-splash-screen";
@@ -172,6 +178,8 @@
 				32831DF32B02113100A18194 /* SplashScreenView.swift in Sources */,
 				32831DFF2B02AFD800A18194 /* View_Search.swift in Sources */,
 				32831DF62B027A6900A18194 /* View-Home.swift in Sources */,
+				32043B9E2B07C7F80037BE99 /* MediaViewModel.swift in Sources */,
+				32043BA42B07ED620037BE99 /* MediaItemModel.swift in Sources */,
 				32831DFA2B027ACF00A18194 /* View_Player.swift in Sources */,
 				32831E052B02E5AA00A18194 /* data.swift in Sources */,
 				32831E032B02DD8B00A18194 /* View_Details.swift in Sources */,

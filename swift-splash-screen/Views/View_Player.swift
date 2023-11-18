@@ -1,18 +1,19 @@
 //
-//  View-Series.swift
+//  View_Player.swift
 //  swift-splash-screen
 //
 //  Created by Andy Bartkiv on 2023-11-13.
 //
 
+import AVKit
 import SwiftUI
 
 struct View_Player: View {
+//    let videoUrl = URL(string: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8")!
     var body: some View {
         ZStack{
             Color.teal
                 .edgesIgnoringSafeArea(.top)
-
             Image(systemName: "film")
                 .foregroundColor(.orange)
                 .opacity(0.65)
