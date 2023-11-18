@@ -1,8 +1,10 @@
 
 <p float="left">
-    <img src="https://github.com/Andy-Bartkiv-Accedo/ios-video-app-challenge/assets/109531858/3d04e238-e313-4cf2-8eaa-1b65a60cd46a" alt="drawing" height="200"/>
-    <img src="https://github.com/Andy-Bartkiv-Accedo/ios-video-app-challenge/assets/109531858/3d04e238-e313-4cf2-8eaa-1b65a60cd46a" alt="drawing" height="200"/>
-    <img src="https://github.com/Andy-Bartkiv-Accedo/ios-video-app-challenge/assets/109531858/3d04e238-e313-4cf2-8eaa-1b65a60cd46a" alt="drawing" height="200"/>
+    <img src="https://github.com/Andy-Bartkiv-Accedo/ios-video-app-challenge/assets/109531858/00113ff1-a6e6-4f35-9a0c-89509ee912e1" alt="drawing" height="250"/>
+    <span>&nbsp&nbsp</span>
+    <img src="https://github.com/Andy-Bartkiv-Accedo/ios-video-app-challenge/assets/109531858/838d53f7-5be6-489f-8c3b-a8c57237a8c9" alt="drawing" height="250"/>
+    <span>&nbsp&nbsp</span>
+    <img src="https://github.com/Andy-Bartkiv-Accedo/ios-video-app-challenge/assets/109531858/42bd0a75-7c3f-4bc0-8206-70da61e97777" alt="drawing" height="250"/>
 </p>
 
 1. Implement a basic app (layout + functionality) that is expected to navigate between three tabs (Home, Search, User), and from the Home tab to Details and then to the Player view.
