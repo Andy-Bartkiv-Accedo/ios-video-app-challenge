@@ -9,8 +9,11 @@ import AVKit
 import SwiftUI
 
 struct View_Player: View {
-//    let videoUrl = URL(string: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8")!
+
+    private let player = AVPlayer(url: URL(string: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8")!)
+    
     var body: some View {
+//        VideoPlayer(player: player)
         ZStack{
             Color.teal
                 .edgesIgnoringSafeArea(.top)
@@ -20,6 +23,7 @@ struct View_Player: View {
                 .font(.system(size: 200.0))
         }
     }
+
 }
 
 #Preview {

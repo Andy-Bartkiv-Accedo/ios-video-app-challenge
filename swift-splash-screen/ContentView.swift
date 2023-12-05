@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @EnvironmentObject private var mvm: MediaViewModel
+
     var body: some View {
+        
         TabView {
             View_Home()
                 .tabItem() {
@@ -26,9 +30,14 @@ struct ContentView: View {
                     Text("My Account")
                 }
         }
+        
+        .task {
+            await mvm.fetchAllData()
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(MediaViewModel())
 }

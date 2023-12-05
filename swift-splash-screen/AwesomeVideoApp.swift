@@ -8,11 +8,11 @@
 import SwiftUI
 
 @main
-struct swift_splash_screenApp: App {
+struct AwesomeVideoApp: App {
+        
     var body: some Scene {
         WindowGroup {
             SplashScreenView()
-//            ContentView()
         }
     }
 }

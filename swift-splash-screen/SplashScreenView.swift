@@ -58,4 +58,5 @@ struct SplashView: View {
 
 #Preview {
     SplashScreenView()
+        .environmentObject(MediaViewModel())
 }

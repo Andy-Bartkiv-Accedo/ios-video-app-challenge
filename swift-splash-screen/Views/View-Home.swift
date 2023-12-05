@@ -9,10 +9,8 @@ import SwiftUI
 
 struct View_Home: View {
     
-    @StateObject private var mvm = MediaViewModel()
-    @State private var error: MediaViewModel.FetchError?
-    @State private var hasError = false
-
+    @EnvironmentObject private var mvm: MediaViewModel
+        
     private var adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
     ]
@@ -31,10 +29,12 @@ struct View_Home: View {
                         }
                     }
                 }
+                FilterSortSelectorsTopBar()
             }
-            
-            .task {
-                await fetchMedia()
+            .refreshable {
+                Task {
+                    await mvm.fetchAllData()
+                }
             }
         }.navigationViewStyle(.stack)
     }
@@ -65,19 +65,8 @@ struct ItemPoster: View {
     }
 }
 
-private extension View_Home {
-    func fetchMedia() async {
-        do {
-            try await mvm.fetchData()
-        } catch {
-            if let mediaErr = error as? MediaViewModel.FetchError {
-                self.hasError = true
-                self.error = mediaErr
-            }
-        }
-    }
-}
 
 #Preview {
     View_Home()
+        .environmentObject(MediaViewModel())
 }

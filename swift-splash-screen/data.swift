@@ -18,6 +18,8 @@ struct Item: Identifiable {
     var poster: String
 }
 
+let dummyItem = MediaItem(id: 0, name: "Title", title: "Title", overview: "François Sentinelle has two lives. By day, he is the most famous cop of Réunion Island, known for his tough methods and flowery shirts, pursuing criminals in his famous yellow defender. But the rest of the time, Sentinelle is also a charming singer.", backdropPath: "", posterPath: "", firstAirDate: "1999", releaseDate: "2100", popularity: 38123, voteAverage: 2.25, voteCount: 9999, type: "movie", favorite: true)
+
 let movies = [
     Item(id:0, title: "The Marvels", year: "2023",
          description: "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
