@@ -28,22 +28,9 @@ struct MediaItem: Codable {
 }
 
 struct KinocheckAPIRes: Codable {
-//    let id: String
-//    let tmdbID: Int
-//    let imdbID, language, title: String
-//    let url: String
     let trailer: Trailer
-//    let videos: [Trailer]
 }
 
-// MARK: - Trailer
 struct Trailer: Codable {
-    let id, youtubeVideoId, youtubeChannelID: String
-//    let youtubeThumbnail: String
-//    let title: String
-//    let thumbnail: String
-//    let language: String
-//    let categories: [String]
-//    let published: Date
-//    let views: Int
+    let youtubeVideoId: String
 }

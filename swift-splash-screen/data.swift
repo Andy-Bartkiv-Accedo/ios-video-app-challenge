@@ -18,7 +18,7 @@ struct Item: Identifiable {
     var poster: String
 }
 
-let dummyItem = MediaItem(id: 0, name: "Title", title: "Title", overview: "François Sentinelle has two lives. By day, he is the most famous cop of Réunion Island, known for his tough methods and flowery shirts, pursuing criminals in his famous yellow defender. But the rest of the time, Sentinelle is also a charming singer.", backdropPath: "", posterPath: "", firstAirDate: "1999", releaseDate: "2100", popularity: 38123, voteAverage: 2.25, voteCount: 9999, type: "movie", favorite: true)
+let dummyItem = MediaItem(id: 872585, name: "Title", title: "Title", overview: "François Sentinelle has two lives. By day, he is the most famous cop of Réunion Island, known for his tough methods and flowery shirts, pursuing criminals in his famous yellow defender. But the rest of the time, Sentinelle is also a charming singer.", backdropPath: "/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg", posterPath: "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg", firstAirDate: "1999", releaseDate: "2100", popularity: 38123, voteAverage: 2.25, voteCount: 9999, type: "movie", favorite: true)
 
 let movies = [
     Item(id:0, title: "The Marvels", year: "2023",

@@ -19,14 +19,14 @@ struct View_Details: View {
             
             ScrollView {
                 
-//                ButtonAddToFavourites(itemId: item.id)
+                ButtonAddToFavourites(itemId: item.id)
                 
-//                YTPlayerView(videoId: item.trailerId ?? "")
+//                YTPlayerView(item: item)
                 
-                ZStack {
-                    ItemImage(imgUrl: item.backdropPath ?? "")
-                    RoundAddToFavourites(itemId: item.id)
-                }
+//                ZStack {
+//                    ItemImage(imgUrl: item.backdropPath ?? "")
+//                    RoundAddToFavourites(itemId: item.id)
+//                }
                 
                 Text((item.name ?? item.title) ?? "Title Unknown")
                     .multilineTextAlignment(.center)
@@ -61,11 +61,13 @@ struct View_Details: View {
                     }
                 }.padding(.top, 1)
                 
-                NavigationLink(destination: View_Player()) {
-                    ButtonPlay()
-                }                    
-                .padding(.top, 5)
-
+//                NavigationLink(destination: View_Player()) {
+//                    ButtonPlay()
+//                }                    
+//                .padding(.top, 5)
+                
+                YTPlayerView(item: item)
+                
                 Text(item.overview)
                     .italic()
                     .font(.system(size: 20))
@@ -73,12 +75,6 @@ struct View_Details: View {
 
             }.padding(.horizontal)
         }
-//        .task {
-//            await mvm.fetchTrailerId(
-//                mediaType: item.type ?? "",
-//                id: String(item.id))
-//        }
-
     }
 }
 

@@ -11,12 +11,10 @@ import Foundation
 final class MediaViewModel: ObservableObject {
     
     let client = MediaHTTPClient()
-    let clientTrailer = KinocheckHTTPClient()
 
     private var fetchedData: [MediaItem] = []
     @Published var mediaLibrary: [MediaItem] = []
     @Published var favotiteIds: [Int] = []
-    @Published var errorMessages = []
     @Published private(set) var isRefreshing = false
     
     func toggleFavorite(itemId: Int) {
@@ -83,28 +81,16 @@ final class MediaViewModel: ObservableObject {
         do {
             fetchedShows = try await client.fetchPopularByType(mediaType: "tv")
         } catch {
-            errorMessages.append(error.localizedDescription)
+            print("Error:", error.localizedDescription)
         }
         do {
             fetchedMovies = try await client.fetchPopularByType(mediaType: "movie")
         } catch {
-            errorMessages.append(error.localizedDescription)
+            print("Error:", error.localizedDescription)
         }
-        if (errorMessages.count > 0) { print("Errors:", errorMessages) }
         self.fetchedData = fetchedShows + fetchedMovies
         self.fetchedData.sort(by:{ $0.popularity ?? 0.0 > $1.popularity ?? 0.0 })
         self.updateLibrary()
-    }
-    
-    func fetchTrailerId(mediaType: String, id: String) async {
-        var trailerId: String = ""
-        do {
-            trailerId = try await clientTrailer.fetchTrailerId(mediaType: mediaType, id: id)
-        } catch {
-            errorMessages.append(error.localizedDescription)
-        }
-        if (errorMessages.count > 0) { print("Errors:", errorMessages) }
-        print(trailerId)
     }
 }
 
