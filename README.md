@@ -21,4 +21,4 @@
 
 ✅ - *(Optional)* Update Player: implement playback of corresponding Video trailers using (https://api.kinocheck.com/)
 
-▢ 6. Implement Sign-In View and user Authentication
+✅ 6. Implement Sign-In View and user Authentication
