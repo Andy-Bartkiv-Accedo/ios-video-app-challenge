@@ -46,6 +46,10 @@ final class MediaViewModel: ObservableObject {
         self.mediaLibrary = self.fetchedData.filter({ self.favotiteIds.contains($0.id) })
     }
     
+    func updateFavorites(newFavorites: [Int] = []) {
+        self.favotiteIds = newFavorites;
+    }
+    
     func updateLibrary() {
         self.mediaLibrary = self.fetchedData
     }

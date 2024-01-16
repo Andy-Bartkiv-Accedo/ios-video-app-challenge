@@ -20,7 +20,9 @@
 		32831DFF2B02AFD800A18194 /* View_Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32831DFE2B02AFD800A18194 /* View_Search.swift */; };
 		32831E032B02DD8B00A18194 /* View_Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32831E022B02DD8B00A18194 /* View_Details.swift */; };
 		32831E052B02E5AA00A18194 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32831E042B02E5AA00A18194 /* data.swift */; };
-		32D5A68C2B1E9DAD0021EDB1 /* YTPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5A68B2B1E9DAD0021EDB1 /* YTPlayerView.swift */; };
+		32BD27C22B280C2C000E6AF2 /* YTButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BD27C12B280C2C000E6AF2 /* YTButtonView.swift */; };
+		32BD27C42B281F80000E6AF2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BD27C32B281F80000E6AF2 /* AuthViewModel.swift */; };
+		32BD27CC2B2BFAF4000E6AF2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BD27CB2B2BFAF4000E6AF2 /* UserModel.swift */; };
 		32D5A6902B1EDE1C0021EDB1 /* KinocheckHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5A68F2B1EDE1C0021EDB1 /* KinocheckHTTPClient.swift */; };
 		32FEF22A2B17975A002931D5 /* MediaHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FEF2292B17975A002931D5 /* MediaHTTPClient.swift */; };
 		32FEF22D2B1953E5002931D5 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FEF22C2B1953E5002931D5 /* DropDownView.swift */; };
@@ -43,7 +45,9 @@
 		32831DFE2B02AFD800A18194 /* View_Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Search.swift; sourceTree = "<group>"; };
 		32831E022B02DD8B00A18194 /* View_Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Details.swift; sourceTree = "<group>"; };
 		32831E042B02E5AA00A18194 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
-		32D5A68B2B1E9DAD0021EDB1 /* YTPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTPlayerView.swift; sourceTree = "<group>"; };
+		32BD27C12B280C2C000E6AF2 /* YTButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTButtonView.swift; sourceTree = "<group>"; };
+		32BD27C32B281F80000E6AF2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		32BD27CB2B2BFAF4000E6AF2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		32D5A68F2B1EDE1C0021EDB1 /* KinocheckHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinocheckHTTPClient.swift; sourceTree = "<group>"; };
 		32FEF2292B17975A002931D5 /* MediaHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaHTTPClient.swift; sourceTree = "<group>"; };
 		32FEF22C2B1953E5002931D5 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
@@ -108,7 +112,7 @@
 			children = (
 				32831DF52B027A6800A18194 /* View-Home.swift */,
 				32831DF92B027ACF00A18194 /* View_Player.swift */,
-				32D5A68B2B1E9DAD0021EDB1 /* YTPlayerView.swift */,
+				32BD27C12B280C2C000E6AF2 /* YTButtonView.swift */,
 				32831DFC2B02AEFA00A18194 /* View_User.swift */,
 				32831DFE2B02AFD800A18194 /* View_Search.swift */,
 				32831E022B02DD8B00A18194 /* View_Details.swift */,
@@ -129,7 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				32043BA32B07ED620037BE99 /* MediaItemModel.swift */,
+				32BD27CB2B2BFAF4000E6AF2 /* UserModel.swift */,
 				32043B9D2B07C7F80037BE99 /* MediaViewModel.swift */,
+				32BD27C32B281F80000E6AF2 /* AuthViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,17 +223,19 @@
 				32D5A6902B1EDE1C0021EDB1 /* KinocheckHTTPClient.swift in Sources */,
 				32831DE72B020FA700A18194 /* ContentView.swift in Sources */,
 				32FEF22D2B1953E5002931D5 /* DropDownView.swift in Sources */,
-				32D5A68C2B1E9DAD0021EDB1 /* YTPlayerView.swift in Sources */,
 				32831DE52B020FA700A18194 /* AwesomeVideoApp.swift in Sources */,
 				32831DFD2B02AEFA00A18194 /* View_User.swift in Sources */,
 				32831DF32B02113100A18194 /* SplashScreenView.swift in Sources */,
 				32831DFF2B02AFD800A18194 /* View_Search.swift in Sources */,
 				32831DF62B027A6900A18194 /* View-Home.swift in Sources */,
+				32BD27C42B281F80000E6AF2 /* AuthViewModel.swift in Sources */,
 				32043B9E2B07C7F80037BE99 /* MediaViewModel.swift in Sources */,
 				32043BA42B07ED620037BE99 /* MediaItemModel.swift in Sources */,
+				32BD27C22B280C2C000E6AF2 /* YTButtonView.swift in Sources */,
 				32831DFA2B027ACF00A18194 /* View_Player.swift in Sources */,
 				32FEF22A2B17975A002931D5 /* MediaHTTPClient.swift in Sources */,
 				32FEF22F2B1967DE002931D5 /* FilterSortSelectorsTopBarView.swift in Sources */,
+				32BD27CC2B2BFAF4000E6AF2 /* UserModel.swift in Sources */,
 				32831E052B02E5AA00A18194 /* data.swift in Sources */,
 				32831E032B02DD8B00A18194 /* View_Details.swift in Sources */,
 				32FEF2312B19684A002931D5 /* FilterTagView.swift in Sources */,

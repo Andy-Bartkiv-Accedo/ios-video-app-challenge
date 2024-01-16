@@ -14,6 +14,8 @@ struct SplashScreenView: View {
     var body: some View {
         if isActive {
             ContentView()
+                .environmentObject(MediaViewModel())
+                .environmentObject(AuthViewModel())
         } else {
             SplashView()
             .onAppear {

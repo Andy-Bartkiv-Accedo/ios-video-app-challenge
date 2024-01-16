@@ -19,14 +19,10 @@ struct View_Details: View {
             
             ScrollView {
                 
-                ButtonAddToFavourites(itemId: item.id)
-                
-//                YTPlayerView(item: item)
-                
-//                ZStack {
-//                    ItemImage(imgUrl: item.backdropPath ?? "")
-//                    RoundAddToFavourites(itemId: item.id)
-//                }
+                ZStack {
+                    ItemImage(imgUrl: item.backdropPath ?? "")
+                    RoundAddToFavourites(itemId: item.id)
+                }
                 
                 Text((item.name ?? item.title) ?? "Title Unknown")
                     .multilineTextAlignment(.center)
@@ -61,13 +57,9 @@ struct View_Details: View {
                     }
                 }.padding(.top, 1)
                 
-//                NavigationLink(destination: View_Player()) {
-//                    ButtonPlay()
-//                }                    
-//                .padding(.top, 5)
-                
-                YTPlayerView(item: item)
-                
+                YTButtonView(item: item)
+                    .padding(.top, 5)
+                                
                 Text(item.overview)
                     .italic()
                     .font(.system(size: 20))
@@ -104,24 +96,13 @@ struct ItemImage: View {
             resImg
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+                .cornerRadius(10)
         }, placeholder: {
             Image(systemName: "film")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 200)
         })
-    }
-}
-
-struct ButtonPlay: View {
-    var body: some View {
-        Image(systemName: "play.fill")
-            .frame(width: 365, height: 65)
-            .font(.system(size: 30))
-            .foregroundColor(.white)
-            .background(Color.teal)
-            .cornerRadius(10)
-            .shadow(radius: 10)
     }
 }
 

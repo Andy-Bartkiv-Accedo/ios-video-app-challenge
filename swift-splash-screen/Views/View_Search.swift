@@ -44,6 +44,12 @@ struct View_Search: View {
                 .cornerRadius(10)
             }
         }
+        
+//        Spacer()
+//        VStack {
+//            Text("Hello")
+//            Spacer()
+//        }
     }
 }
 

@@ -27,7 +27,7 @@ struct KinocheckHTTPClient {
             }
             return apiRes.trailer.youtubeVideoId
         } else {
-            return ""
+            return "nAchMctX4YA"
         }
     }
     

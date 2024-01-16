@@ -1,37 +1,37 @@
 //
-//  YTPlayerView.swift
+//  YTButtonView.swift
 //  swift-splash-screen
 //
-//  Created by Andy Bartkiv on 2023-12-04.
+//  Created by Andy Bartkiv on 2023-12-11.
 //
 
 import WebKit
 import SwiftUI
 
-struct YTPlayerView: View {
+struct YTButtonView: View {
     var item: MediaItem
     private let clientTrailer = KinocheckHTTPClient()
     
-    @EnvironmentObject private var mvm: MediaViewModel
-    @State private(set) var isFetchingId = false
-    @State var videoId: String = ""
+    @State var videoId: String = "nAchMctX4YA"
 
     var body: some View {
         ZStack {
-            if isFetchingId || videoId == "" {
-                ItemImage(imgUrl: item.backdropPath ?? "")
-                    .frame(height:220)
-                    .cornerRadius(10)
-            } else {
-                Video(videoId: videoId)
-                    .background(Color.black)
-                    .frame(height:220)
-                    .cornerRadius(10)
+            Image(systemName: videoId == "nAchMctX4YA"
+                  ? "play.circle"
+                  : "play.fill")
+                .frame(width: 365, height: 65)
+                .font(.system(size: 30))
+                .foregroundColor(.white)
+                .background(Color.teal)
+                .cornerRadius(10)
+                .shadow(radius: 10)
+            
+            Video(videoId: videoId)
+                .frame(width: 365, height: 65)
+                .cornerRadius(10)
+                .opacity(0.02)
             }
-        }
         .task {
-            isFetchingId = true
-            defer { isFetchingId = false }
             do {
                 videoId = try await clientTrailer.fetchTrailerId(
                     mediaType: item.type ?? "", id: String(item.id)
@@ -57,5 +57,5 @@ struct Video: UIViewRepresentable{
 }
 
 #Preview {
-    YTPlayerView(item: dummyItem)
+    YTButtonView(item: dummyItem)
 }

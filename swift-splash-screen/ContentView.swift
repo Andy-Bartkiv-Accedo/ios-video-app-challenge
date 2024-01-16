@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     @EnvironmentObject private var mvm: MediaViewModel
+    @EnvironmentObject private var avm: AuthViewModel
 
     var body: some View {
         
@@ -19,6 +20,7 @@ struct ContentView: View {
                     Image(systemName: "film.stack")
                     Text("Home")
                 }
+                .environmentObject(mvm)
             View_Search()
                 .tabItem() {
                     Image(systemName: "magnifyingglass")
@@ -29,6 +31,8 @@ struct ContentView: View {
                     Image(systemName: "person.fill")
                     Text("My Account")
                 }
+                .environmentObject(avm)
+                .environmentObject(mvm)
         }
         
         .task {
@@ -40,4 +44,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(MediaViewModel())
+        .environmentObject(AuthViewModel())
 }
