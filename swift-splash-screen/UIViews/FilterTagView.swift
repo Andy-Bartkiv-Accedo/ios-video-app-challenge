@@ -35,7 +35,6 @@ struct FilterTag: View {
                         selectedFilter = label
                         switch label {
                         case "Favorite":
-//                            mvm.getRandom(qty: 6)
                             mvm.filterFavourites()
                         case "Movies":
                             mvm.filterLibrary(mediaType: "movie")

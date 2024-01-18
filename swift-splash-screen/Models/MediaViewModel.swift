@@ -14,6 +14,7 @@ final class MediaViewModel: ObservableObject {
 
     private var fetchedData: [MediaItem] = []
     @Published var mediaLibrary: [MediaItem] = []
+    @Published var searchResults: [MediaItem] = []
     @Published var favotiteIds: [Int] = []
     @Published private(set) var isRefreshing = false
     
@@ -38,8 +39,18 @@ final class MediaViewModel: ObservableObject {
         self.mediaLibrary = Array(lib[..<min(qty, lib.count)])
     }
     
+    func searchLibrary(query: String) {
+        self.searchResults = self.fetchedData.filter({
+//            $0.title == query || $0.name == query
+            var itemName = ""
+            itemName = $0.title != nil ? $0.title! : itemName
+            itemName = $0.name != nil ? $0.name! : itemName
+            return itemName.containsIgnoringCase(find: query)
+        })
+    }
+    
     func filterLibrary(mediaType: String) {
-        self.mediaLibrary = self.fetchedData.filter({ $0.type == mediaType})
+        self.mediaLibrary = self.fetchedData.filter({ $0.type == mediaType })
     }
     
     func filterFavourites() {
@@ -98,6 +109,14 @@ final class MediaViewModel: ObservableObject {
     }
 }
 
+extension String {
+    func contains(find: String) -> Bool{
+        return self.range(of: find) != nil
+    }
+    func containsIgnoringCase(find: String) -> Bool{
+        return self.range(of: find, options: .caseInsensitive) != nil
+    }
+}
 
 
 
