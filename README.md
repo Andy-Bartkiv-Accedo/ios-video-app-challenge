@@ -15,7 +15,7 @@
 
 ✅ 4. Add filtering and sorting functionality to the Home View (Top Tags). 
 
-▢ - *(Optional)* Add functionality to Search View: search through uploaded media library items.
+✅ - *(Optional)* Add functionality to Search View: search through uploaded media library items.
 
 ✅ 5. Add a Player view of the app, and implement a Player to be able to play test-stream video.
 
